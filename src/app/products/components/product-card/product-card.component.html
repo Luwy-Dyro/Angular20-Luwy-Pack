@@ -1,0 +1,19 @@
+
+
+
+<div class="card bg-base-100  shadow-sm animate-fadeIn cursor-pointer">
+  <figure>
+    <img
+      [src]="products().images | productImage"
+      [alt]="products().title" [routerLink]="['/product', products().slug]" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-monserratmedium text-accent cursor-pointer hover:underline" [routerLink]="['/product', products().slug]" routerLinkActive="router-link-active">{{ products().title }}</h2>
+    <p>{{products().description | slice: 0:70 }} ....</p>
+    <div class="card-actions justify-end">
+      <!-- <button class="btn btn-primary">Buy Now</button> -->
+            <a [routerLink]="['/product', products().slug]" routerLinkActive="router-link-active"  class="link link-accent ">Ver Producto</a>
+    </div>
+  </div>
+</div>
+

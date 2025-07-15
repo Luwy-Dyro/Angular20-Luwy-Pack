@@ -1,0 +1,28 @@
+<h1 class="text-3xl font-bold font-monserratmedium" >
+All the Product {{paginationService.currentPage()}}
+</h1>
+<h2 class="text-xl mb-5">For all tastes </h2>
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+  
+    <!-- 2da forma con señal  -->
+    <!-- @for (product of products()?.products ; track product.id ) { -->
+     
+   @for (product of products.value()?.products ; track product.id ) {
+
+       <product-card [products] = "product"></product-card>
+
+   }
+   <!-- @empty {
+    <p>NO hay productos</p>
+   } -->
+
+       
+</div>
+
+
+<app-pagination [pages]="products.value()?.pages ?? 0"
+[currenPage] = "paginationService.currentPage()"
+></app-pagination>

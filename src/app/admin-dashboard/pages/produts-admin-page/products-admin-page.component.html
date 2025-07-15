@@ -1,0 +1,30 @@
+<h1 class="text-2xl font-bold">Listao de Products</h1>
+<h3 class="text-lg">Total de Products
+    <span class="text-accent"> {{products.value()?.count}}</span>
+</h3>
+<div class="divider"></div>
+
+<div class="flex gap-2 items-center h-20"> 
+
+    <app-pagination [pages]="products.value()?.pages ?? 0"
+    [currenPage] = "paginationService.currentPage()"
+    ></app-pagination>
+
+    <select class="select select-bordered w-32" 
+        (change)="productsPerPage.set(+selectPerP.value)"
+    #selectPerP>
+        <option value="">10</option>
+        <option value="">20</option>
+        <option value="">50</option>
+        <option value="">100</option>
+    </select>
+
+    <div class="flex flex-1"></div>
+
+    <button class="btn btn-primary" routerLink="/admin/products/new" >
+        Nuevo Producto
+
+    </button>
+    
+</div>
+<product-table [productos]="products.value()?.products ?? []"></product-table>
