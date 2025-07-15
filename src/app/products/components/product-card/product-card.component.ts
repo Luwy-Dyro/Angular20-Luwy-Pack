@@ -13,8 +13,8 @@ export class ProductCardComponent {
 
   products = input.required<Product>()
 
-  imageURL = computed( () =>{
-    return `http://localhost:3000/api/files/product/${this.products().images[0] }` 
-  })
+  // imageURL = computed( () =>{
+  //   return `http://localhost:3000/api/files/product/${this.products().images[0] }` 
+  // })
 
  }
