@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "outputPath": "dist/LuwyShop/browser",
+            "outputPath": "dist/LuwyShop",
             "polyfills": [
               "zone.js"
             ],
