@@ -1,3 +1,3 @@
 export const environment = {
-     BASE_URL: "http://localhost:3000/api"
+     BASE_URL: "https://nest-luwy-pack.onrender.com/api"
 };
